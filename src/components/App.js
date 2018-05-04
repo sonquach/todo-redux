@@ -1,30 +1,14 @@
-import React from 'react';
-import NewTodo from './NewTodo';
-import List from './List';
+import React from 'react'
+import Footer from './Footer'
+import AddTodo from '../containers/AddTodo'
+import VisibleTodoList from '../containers/VisibleTodoList'
 
-const todoList = [
-    {
-      id: 1,
-      text: "Learning React"
-    },
-    {
-      id: 2,
-      text: "Learning English"
-    }
-  ];
+const App = () => (
+  <div>
+    <AddTodo />
+    <VisibleTodoList />
+    <Footer />
+  </div>
+)
 
-class App extends React.Component {
-    render() {
-        return (
-            <div>
-                <NewTodo />
-                <hr/>
-                <List />
-            </div>
-        );
-    }
-
-
-}
-
-export default App;
+export default App
